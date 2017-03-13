@@ -28,7 +28,7 @@ $app->delete("/pessoas/:id", function($id) use ($app){
 });
 
 $app->get("/", function () {
-echo "SlimProdutos ";
+echo "acessar /index.php/ ";
 });
 
 
