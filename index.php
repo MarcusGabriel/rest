@@ -1,5 +1,5 @@
 <?php
-use controllers\Pessoa;
+use controllers\Fornecedor;
 use Slim\Slim;
 $loader = require 'vendor/autoload.php';
 
@@ -7,28 +7,28 @@ $app = new Slim(array(
     'templates.path' => 'templates'
 ));
 //listando todos
-$app->get("/pessoas/", function() use ($app){
-    (new Pessoa($app))->lista();
+$app->get("/fornecedor/", function() use ($app){
+    (new Fornecedor($app))->lista();
 });
 //listando um
-$app->get("/pessoas/:id", function($id) use ($app){
-    (new Pessoa($app))->get($id);
+$app->get("/fornecedor/:id", function($id) use ($app){
+    (new Fornecedor($app))->get($id);
 });
 //cadastro - nova pessoa
-$app->post("/pessoas/", function() use ($app){
-    (new Pessoa($app))->nova();
+$app->post("/fornecedor/", function() use ($app){
+    (new Fornecedor($app))->nova();
 });
 //editando pessoa
-$app->put("/pessoas/:id", function($id) use ($app){
-    (new Pessoa($app))->editar($id);
+$app->put("/fornecedor/:id", function($id) use ($app){
+    (new Fornecedor($app))->editar($id);
 });
 //apagando pessoa
-$app->delete("/pessoas/:id", function($id) use ($app){
-    (new Pessoa($app))->excluir($id);
+$app->delete("/fornecedor/:id", function($id) use ($app){
+    (new Fornecedor($app))->excluir($id);
 });
 
 $app->get("/", function () {
-echo "acessar /index.php/ ";
+echo "Para Fornecedores:  <a href='#'>/index.php/</a> ";
 });
 
 
