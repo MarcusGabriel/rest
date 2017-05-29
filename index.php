@@ -28,7 +28,7 @@ $app->delete("/fornecedor/:id", function($id) use ($app){
 });
 
 $app->get("/", function () {
-echo "Para Fornecedores:  <a href='#'>/index.php/</a> ";
+echo "Para Fornecedores:  <a href='/restsysfornecedor/index.php/fornecedor/'>/link/</a> ";
 });
 
 
